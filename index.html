@@ -1,5 +1,146 @@
-<html>
-  <body>
-    <h1>le initta committa</h1>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <meta name="theme-color" content="#151a1f">
+    <meta name='description' content="Angela's Portfolio">
+    <meta name='robots' content='index,follow'>
+    <base href='/'>
+    <link rel='manifest' href='build/manifest.json'>
+    <link rel='stylesheet' href='build/styles.css'>
+    <title>Angela</title>
+</head>
+<body>
+	<div id='heading' class='home'>
+        <nav id='nav' class='nav hidden'>
+            <a class='navbtn' href='#'>Home</a>
+            <a class='navbtn' href='#/about'>About</a>
+            <a class='navbtn' href='#/projects'>Projects</a>
+            <!-- <a class='navbtn' href='#/contact'>Contact</a> -->
+            <a class='navbtn' href="mailto:at818@scarletmail.rutgers.edu" target="_blank">Contact</a>
+        </nav>
+        <div id='mountainHome' class='mountain mountainHome show'></div>
+        <div id='home' class='background home show'></div>
+        <div id='about' class='background about'></div>
+        <div id='projects' class='background projects'></div>
+        <div id='contact' class='background contact'></div>
+		<div id='home-header' class='home-header hideNav'>
+            <div class='headerIcon'>
+                <p class='initials'>AT</p>
+            </div>
+			<h1 class='home-title'>Angela Tu</h1>
+			<div class='button container'>
+                <div id='abt' class='btn'>
+                    <a href='#/about'>
+                        <div class='homeIcon'>
+                            <i class='fa fa-user' aria-hidden='true'></i>
+                        </div>
+                        <span>ABOUT</span>
+                    </a>
+                </div>
+                <div id='prj' class='btn'>
+                    <a href='#/projects'>
+                        <div class='homeIcon'>
+                            <i class='fa fa-desktop' aria-hidden='true'></i>
+                        </div>
+                        <span>PROJECTS</span>
+                    </a>
+                </div>
+                <div id='con' class='btn'>
+                    <a href="mailto:at818@scarletmail.rutgers.edu" target="_blank">
+                    <!-- <a href='#/contact'> -->
+                        <div class='homeIcon'>
+                            <i class='fa fa-envelope-o' aria-hidden='true'></i>
+                        </div>
+                        <span>CONTACT</span>
+                    </a>
+                </div>
+			</div>
+		</div>
+        <div id='aboutDiv' class='panel displayHide'>
+            <div class='scrollDiv'>
+                <div class='return'>
+                    <a href='#'><i class='down-arrow about-down fa fa-chevron-down' aria-hidden='true'></i></a>
+                </div>
+                <div class='aboutSection container description'>
+                    <h3>About Me</h3>
+                    <div>
+                        <p>Hey there, I'm Angela! I am a loser.</p>
+                    </div>
+                </div>
+                <div class='container toolbox'>
+                    <hr>
+                    <h3>My Toolbox</h3>
+                    <div class='button'>
+                        list stuff here
+                    </div>
+                    <hr>
+                </div>
+                <p class='projectLink'><a class='aboutLink' href='#/projects'>View some of my recent projects.</a></p>
+            </div>
+        </div>
+        <div id='projectDiv' class='panel displayHide'>
+            <div class='scrollDiv'>
+                <h1>My Projects</h1>
+                <!-- <h3>Here is a sample of my recent work.</h3> -->
+                <div class='container'>
+                    <ul id='projectList'>
+                    </ul>
+                </div>
+                <div class='return'>
+                    <a href='#'><i class='down-arrow project-down fa fa-chevron-down' aria-hidden='true'></i></a>
+                </div>
+                <div>
+                    <!-- <p class='contactLink'>If you would like to know more, please <a href="#/contact">contact me!</a></p> -->
+                    <p class='contactLink'>If you would like to know more, please <a href="mailto:at818@scarletmail.rutgers.edu" target="_blank">contact me!</a></p> 
+                </div>
+            </div>
+        </div>
+        <div id='largeImageDiv' class='hideImage'>
+            <img alt='large image' id='imageDiv'>
+            <p class='liText'>Click to return</p>
+        </div>
+        <footer id='footer' class="footer">
+
+		</footer>
+        <div id='tooltip' class='hide'><p id='tooltipText'></p></div>
+    	<canvas id='canvas'></canvas>
+    </div>
+    <noscript id='deferred-styles'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css'>
+    </noscript>
+    <script type='text/javascript'>
+        var loadDeferredStyles = function(){
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement);
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        const raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if(raf){
+            raf(function(){
+                window.setTimeout(loadDeferredStyles, 0);
+            });
+        }else{
+            window.addEventListener('load', loadDeferredStyles);
+        }
+    </script>
+    <script type="text/javascript">
+        var downloadJSAtOnload=function(){
+            var element = document.createElement("script");
+            element.src = "/build/bundle.js";
+            document.body.appendChild(element);
+        }
+        if (window.addEventListener){
+            window.addEventListener("load", downloadJSAtOnload, false);
+        }else if (window.attachEvent){
+            window.attachEvent("onload", downloadJSAtOnload);
+        }else {
+            window.onload = downloadJSAtOnload;
+        };
+    </script>
+</body>
 </html>

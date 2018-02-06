@@ -1,0 +1,7 @@
+{
+    "name": "Angela's Portfolio",
+    "background_color": "#151a1f",
+    "theme_color": "#151a1f",
+    "display": "standalone",
+    "orientation": "portrait"
+}
